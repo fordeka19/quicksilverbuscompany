@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/route_image"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/base_margin"/>
+
+    <TextView
+        android:id="@+id/route_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/route_image"
+        android:layout_toLeftOf="@+id/accessability_image"
+        android:textSize="@dimen/route_name_text_size"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+    <TextView
+        android:id="@+id/route_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_below="@+id/route_name"
+        android:layout_toRightOf="@id/route_image"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/grey_text_color"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/accessability_image"
+        android:layout_width="@dimen/accessibility_icon_size"
+        android:layout_height="@dimen/accessibility_icon_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_accessibility"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginRight="@dimen/base_margin"
+        android:visibility="gone"/>
+</RelativeLayout>

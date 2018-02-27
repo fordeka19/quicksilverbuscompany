@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Icons made by https://www.flaticon.com/authors/vectors-market" Vectors Market from "https://www.flaticon.com Flaticon www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/ Creative Commons BY 3.0"-->
+    <background android:drawable="@drawable/ic_launcher_bus" />
+    <foreground android:drawable="@drawable/ic_launcher_bus" />
+</adaptive-icon>

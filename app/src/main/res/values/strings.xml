@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuicksilverBusCompany</string>
+    <string name="title_route_detail">Route Detail</string>
+    <string name="routes_title">Routes</string>
+    <string name="get_routes_error">Oops! Something went wrong retrieving route information.</string>
+    <string name="ok">OK</string>
+</resources>
