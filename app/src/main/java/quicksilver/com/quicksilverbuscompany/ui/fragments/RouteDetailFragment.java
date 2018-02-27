@@ -9,12 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -26,8 +23,8 @@ import quicksilver.com.quicksilverbuscompany.R;
 import quicksilver.com.quicksilverbuscompany.presentation.RouteDetailContract;
 import quicksilver.com.quicksilverbuscompany.ui.activities.RouteListActivity;
 import quicksilver.com.quicksilverbuscompany.model.Route;
-import quicksilver.com.quicksilverbuscompany.model.Stop;
 import quicksilver.com.quicksilverbuscompany.ui.activities.RouteDetailActivity;
+import quicksilver.com.quicksilverbuscompany.ui.views.RouteView;
 
 /**
  * A fragment representing a single Route detail screen.
@@ -103,22 +100,8 @@ public class RouteDetailFragment extends Fragment implements RouteDetailContract
     }
 
     private void setupStopViews(Route route) {
-        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        List<Stop> stops = route.getStops();
-        int size = stops.size();
-        for (int i = 0; i < size; i++) {
-            Stop stop = stops.get(i);
-            ViewGroup stopLayout = (ViewGroup) inflater.inflate(R.layout.stop_layout, null);
-            TextView stopTv = stopLayout.findViewById(R.id.stop_name);
-            stopTv.setText(stop.getName());
-            mLayout.addView(stopLayout);
-
-            // add divider line between stops
-            if (i < size - 1) {
-                RelativeLayout stopLine = (RelativeLayout) inflater.inflate(R.layout.stop_line, null);
-                mLayout.addView(stopLine);
-            }
-        }
+        RouteView routeView = new RouteView(getActivity());
+        routeView.setupStopViews(route);
+        mLayout.addView(routeView);
     }
 }
